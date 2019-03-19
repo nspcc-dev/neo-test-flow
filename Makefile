@@ -4,7 +4,7 @@ R=\033[0m
 
 DEFAULT: up
 
-.PHONY: env-up up down connect help
+.PHONY: env-up up down connect connect-cli help
 
 # Show this help prompt
 help:
@@ -35,3 +35,8 @@ down:
 connect:
 	@echo "\n${B}${G}Connect to neo-python${R}\n"
 	@docker exec -it neo-python /bin/bash
+
+# Connect to neo-cli
+connect-cli:
+	@echo "\n${B}${G}Connect to neo-python${R}\n"
+	@docker exec -it neo-cli-privatenet-1 /bin/bash
